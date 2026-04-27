@@ -75,54 +75,14 @@ Performed initial dataset inspection.
 * Examined summary statistics
 * Identified missing values
 
-### Functions Used
-
-```python
-.head()
-.info()
-.describe()
-.shape
-.isnull().sum()
-```
-
----
 
 ## 2. Data Cleaning
 
 Cleaned dataset to improve analysis quality.
 
-### Cleaning Steps
-
-* Removed invalid transactions
-* Removed negative quantity values
-* Filtered returned/cancelled orders
-* Handled missing values
-
-### Example
-
-```python
-df = df[df['Quantity'] > 0]
-```
-
----
-
 ## 3. Feature Engineering
 
 Created a Revenue column for transaction-level business analysis.
-
-### Formula
-
-```python
-Revenue = Quantity × UnitPrice
-```
-
-### Code
-
-```python
-df['Revenue'] = df['Quantity'] * df['UnitPrice']
-```
-
----
 
 ## 4. Revenue Trend Analysis
 
